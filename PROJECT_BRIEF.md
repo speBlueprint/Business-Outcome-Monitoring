@@ -46,8 +46,8 @@ Eight Northwind flows generated in the browser from a fixed seed. "Now" is Fri 2
 - `src/data/flows.ts`: the eight flows and their generator. Change scenarios here only; keep the generator order or the data changes.
 - `src/lib/engine.ts`: analyze() (baselines, conditions, Alert History), settings, the estate rollups, every mutation, the notification wording.
 - `src/state/store.tsx`: view state, dialogs, toast, the walkthrough STEPS and the short path.
-- `src/components/`: Estate (home), FlowPage (header, tabs), Overview, RunsTable, History, Settings, Modals, AppFrame (product chrome), GuideBar, charts/charts.tsx.
-- `src/styles/app.css`: the whole stylesheet. Tailwind is present but its preflight is off; keep the class names.
+- `src/demo/`: DemoApp (entry), Estate (home), FlowPage (header, tabs), Overview, RunsTable, History, Settings, Modals, AppFrame (product chrome), GuideBar, charts/charts.tsx.
+- `src/demo.css`: the whole stylesheet, imported unlayered from `src/styles.css` with Tailwind preflight off; keep the class names. The app shell (`src/routes/`, `src/router.tsx`, `src/start.ts`, `src/server.ts`, `src/components/ui/`) is Lovable's TanStack Start template; the demo mounts on the `/` route.
 
 ## Walkthrough (ten steps; short path = 1, 3, 6, 7, 9)
 

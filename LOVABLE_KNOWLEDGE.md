@@ -15,7 +15,7 @@ Rules that must survive every edit:
 9. The timeframe selector changes only what is drawn, never the band, the status or whether a point is an anomaly.
 10. The engine lives in src/lib/engine.ts and the data in src/data/flows.ts. Do not change the calculation (median ± 3 × Scaled MAD, 10-run minimum, pinned 90 days) or the generator order without being asked.
 11. State, dialogs and the walkthrough live in src/state/store.tsx. Add new behaviour as store or engine functions, not ad-hoc local state, unless it is purely a form field.
-12. Keep the product look: light theme, navy header, grey table headers, blue links, Open Sans in the frame, nothing below 11px. Do not replace src/styles/app.css with a redesign; keep its class names.
+12. Keep the product look: light theme, navy header, grey table headers, blue links, Open Sans in the frame, nothing below 11px. Do not replace src/demo.css with a redesign; keep its class names. Keep Tailwind preflight off in src/styles.css.
 13. Keyboard behaviour: arrows move the walkthrough, Escape closes the dialog, then the Tools menu. Keep it.
 
-When asked for a change, make the smallest edit that does it, in the component that owns that screen.
+When asked for a change, make the smallest edit that does it, in the component under src/demo/ that owns that screen.

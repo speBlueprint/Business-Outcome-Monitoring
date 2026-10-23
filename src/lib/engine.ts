@@ -169,7 +169,7 @@ export function analyze(flow: Flow): Flow {
   if (flow.monitored && last) {
     /* Run Frequency (rule). Counts only non-excluded elapsed time. Not suppressed by pause (FR-3.3). */
     const win = flow.monitorMode === "custom" && flow.custom ? flow.custom.freqWindow : flow.freqWindowH;
-    flow.freqWindowH = win;
+    flow.freqWindowH = win ?? null;
     if (win != null && typeOn(flow, "Run Frequency")) {
       let elapsed = 0;
       for (let t = last.t; t < NOW; t += HOUR) if (!isExcluded(flow, t)) elapsed += HOUR;
