@@ -1,0 +1,7 @@
+@import "./styles/app.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The prototype's own stylesheet. Tailwind's preflight is kept off (see tailwind.config.js) so these rules render as designed. */
+
